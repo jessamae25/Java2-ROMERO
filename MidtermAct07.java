@@ -3,16 +3,16 @@ import com.googlecode.lanterna.terminal.ansi.*;
 
 public class MidtermAct07
 {
-	public static void main(String[] args) throws java.io.IOException {
+	public static void main (String[] args) throws java.io.IOException {
 		Terminal terminal = new DefaultTerminalFactory().createTerminal();
 		terminal.enterPrivateMode();
-		int j,m;
-		for(j=1;j<21;j++){
-			terminal.setCursorPosition(j,1);
-			terminal.putCharacter('X');
-		}for (m=1;m<21;m++){
-			terminal.setCursorPosition(m,1);
-			terminal.putCharacter('X');
+		int r,c;
+		for (r=1;r<21;r++){
+			terminal.setCursorPosition(1,r);
+			for (c=1;c<21;c++){
+				terminal.putCharacter('X');
+		}
+			System.out.println();
 		}
 		terminal.flush();
 		terminal.readInput();
